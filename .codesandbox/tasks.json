@@ -1,0 +1,27 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "pip install -r requirements.txt"
+    }
+  ],
+  "tasks": {
+    "dev": {
+      "name": "Start Dev Server",
+      "command": "uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+      "runAtStart": true,
+      "preview": {
+        "port": 8000
+      }
+    },
+    "test": {
+      "name": "Run Tests",
+      "command": "pytest tests/ -v"
+    },
+    "test:watch": {
+      "name": "Run Tests (Watch)",
+      "command": "pytest tests/ -v --tb=short -x"
+    }
+  }
+}

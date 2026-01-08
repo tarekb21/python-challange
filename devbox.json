@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.11",
+    "python311Packages.pip"
+  ],
+  "shell": {
+    "init_hook": [
+      "pip install -r requirements.txt -q"
+    ]
+  }
+}

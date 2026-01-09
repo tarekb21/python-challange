@@ -27,3 +27,8 @@ class UserUpdate(BaseModel):
     name: Optional[str] = None
     email: Optional[str] = None
     age: Optional[int] = None
+
+class Response(BaseModel):
+    success: bool
+    message: str
+    data: Optional[User] | Optional[list[User]] = None
